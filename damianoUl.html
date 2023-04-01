@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+			*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body{
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-d-c{
+    flex-direction: column;
+}
+
+
+#gameBoard{
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient( to bottom right,rgba(63,81,181,1) 0%, rgba(171,71,188 ,1) 70%)1;
+    border-radius: 5px;
+}
+
+.b-b-n
+{
+    border-bottom: none;
+}
+
+.b-r-n{
+    border-right: none;
+}
+
+.b-t-n{
+    border-top: none;
+}
+
+.b-l-n{
+    border-left: none;
+}
+
+.bg-c-f{
+    color: #f2c14e;
+}
+.f-s-120px{
+    font-size: 120px;
+}
+.f-s-48px{
+    font-size: 48px;
+}
+
+.f-f-Permanent-Marker{
+    
+    background: -webkit-linear-gradient(right, rgb(111, 247, 254)50%, rgb(218, 142, 232)50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.l-s-3px{
+    letter-spacing: 3px;
+}
+
+.f-s-24px{
+    font-size: 32px;
+}
+
+.m-b-20px{
+    margin-bottom: 20px;
+}
+
+.SBT-m-b-300px{
+    margin-bottom: 70px;
+}
+
+.T-m-t-15px{
+    margin-top: 15px;
+}
+
+.B-m-t-70px{
+    margin-top: 70px;
+}
+
+button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: yellow;
+    cursor: pointer;
+    border-color: #2d414b;
+    color: #000;
+}
+
+a{
+    text-decoration: none;
+    color: #2d414b;
+}
+
+.font-button{
+    font-size: 18px;
+}
+
+button:hover{
+    box-shadow: 1px 1px 15px 5px #2c7bab;   
+}
+
+.f-f-Comics{
+    font-family: 'Comic Neue', cursive;
+}
+
+.B-m-t-70px{
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 1080px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+    body{
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        
+    }
+    
+    .flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .f-d-c{
+        flex-direction: column;
+    }
+    
+    #gameBoard{
+        width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px auto;
+        cursor: pointer;
+    }
+    
+    .box{
+        width: 100px;
+        height: 100px;
+        border-width: 2px;
+        border-style: solid;
+        border-image: linear-gradient( to bottom right,rgba(63,81,181,1) 0%, rgba(171,71,188 ,1) 70%)1;
+        border-radius: 5px;
+    }
+    
+    
+    
+    .b-b-n
+    {
+        border-bottom: none;
+    }
+    
+    .b-r-n{
+        border-right: none;
+    }
+    
+    .b-t-n{
+        border-top: none;
+    }
+    
+    .b-l-n{
+        border-left: none;
+    }
+    
+    
+    .bg-c-f{
+        color: #f2c14e;
+    }
+    .f-s-120px{
+        font-size: 60px;
+    }
+    .f-s-48px{
+        font-size: 30px;
+    }
+    
+    .f-f-Permanent-Marker{
+        font-family: 'Permanent Marker', cursive;
+        background: -webkit-linear-gradient(right, rgb(255, 255, 0)50%, rgb(0, 255, 0)50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .l-s-3px{
+        letter-spacing: 3px;
+    }
+    
+    .f-s-24px{
+        font-size: 32px;
+    }
+    
+    .m-b-20px{
+        margin-bottom: 30px;
+    }
+    
+    .SBT-m-b-300px{
+        margin-bottom: 40px;
+    }
+    
+    .T-m-t-15px{
+        margin-top: 20px;
+    }
+    
+    .B-m-t-70px{
+        margin-top: 70px;
+    }
+    
+    button{
+        padding: 5px 10px;
+        border-radius: 10px;
+        background-color: darkred;
+        cursor: pointer;
+        border-color: #2d414b;
+        color: #000;
+    }
+    
+    a{
+        text-decoration: none;
+        color: #2d414b;
+    }
+    
+    .font-button{
+        font-size: 18px;
+    }
+    
+    button:hover{
+        box-shadow: 1px 1px 15px 5px #2c7bab;   
+    }
+    
+    .f-f-Comics{
+        font-family: 'Comic Neue', cursive;
+    }
+    
+    .B-m-t-70px{
+        margin-top: 30px;
+    }
+}
+	</style>
+   <div class="flex f-d-c">
+        <h1 id="NameTag" class="f-f-Permanent-Marker f-s-48px l-s-3px T-m-t-15px">UOMO VS COMPUTER</h1>
+        <button onclick="startgame()" id="restartButton" class="font-button f-f-Comics B-m-t-70px">
+            <a href="#">
+                Ricomincia
+            </a>
+        </button> 
+        <div id="gameBoard">
+            <div class="box f-s-120px f-f-Permanent-Marker b-t-n b-l-n" id="0"></div>
+            <div class="box f-s-120px f-f-Permanent-Marker b-t-n" id="1"></div>
+            <div class="box b-r-n f-s-120px f-f-Permanent-Marker b-t-n" id="2"></div>
+            <div class="box f-s-120px f-f-Permanent-Marker b-l-n" id="3"></div>
+            <div class="box f-s-120px f-f-Permanent-Marker" id="4"></div>
+            <div class="box b-r-n f-s-120px f-f-Permanent-Marker" id="5"></div>
+            <div class="box b-b-n f-s-120px f-f-Permanent-Marker b-l-n" id="6"></div>
+            <div class="box b-b-n f-s-120px f-f-Permanent-Marker" id="7"></div>
+            <div class="box b-b-n b-r-n f-s-120px f-f-Permanent-Marker SBT-m-b-300px" id="8"></div>
+        </div>
+        <h2 id="statusPlayer" class="f-f-Permanent-Marker f-s-24px"></h2>
+    </div>
+    <script type="text/javascript">
+    	var origBoard;
+const huPlayer = 'X'
+const UIPlayer = 'O'
+const Combo = [
+    [0, 1, 2],
+	[3, 4, 5],
+	[6, 7, 8],
+	[0, 3, 6],
+	[1, 4, 7],
+	[2, 5, 8],
+	[0, 4, 8],
+	[6, 4, 2]
+]
+
+const cells = document.querySelectorAll('.box')
+let statusPlayerTxt = document.getElementById('statusPlayer')
+let restartBtn = document.getElementById('restartButton')
+startgame()
+
+function startgame(){
+    origBoard = Array.from(Array(9).keys())
+    for(let i = 0; i<cells.length; i++){
+        cells[i].innerText = ''
+        cells[i].addEventListener('click', turnclick)
+        statusPlayerTxt.innerHTML=''
+    }
+    
+}
+
+function turnclick(square){
+    if(typeof origBoard[square.target.id] == 'number'){
+        turn(square.target.id, huPlayer)
+        if(!checkTie())
+        {
+            turn(bestSpot(), UIPlayer)
+        }
+    }
+}
+
+function turn(squareId, player){
+    origBoard[squareId] = player
+    document.getElementById(squareId).innerHTML = player
+    checkWin(origBoard, player)
+}
+
+function checkWin(){
+    for(let i = 0; i<Combo.length; i++)
+    {
+        let[a,b,c] = Combo[i]
+        if (origBoard[a] === origBoard[b] && origBoard[b] === origBoard[c]) {
+            if (origBoard[i] != UIPlayer) {
+                statusPlayerTxt.innerHTML="COMPLIMENTI, HAI VINTO"
+            }
+            else{
+                statusPlayerTxt.innerHTML="COMPLIMENTI, HAI PERSO"
+            }
+
+            for(let i = 0; i<cells.length; i++){
+                cells[i].removeEventListener('click', turnclick)
+            }
+            return[a,b,c]
+        }
+
+        if (origBoard[b] === origBoard[a] && origBoard[a] === origBoard[c]) {
+            if (origBoard[i] != UIPlayer) {
+                statusPlayerTxt.innerHTML="HAI VINTO"
+            } else{
+                statusPlayerTxt.innerHTML="HAI PERSO"
+            }
+
+             for(let i = 0; i<cells.length; i++){
+                cells[i].removeEventListener('click', turnclick)
+            }
+
+            return[a,b,c]
+        }
+
+        if (origBoard[c] === origBoard[b] && origBoard[b] === origBoard[a]) {
+            if (origBoard[i] != UIPlayer) {
+                statusPlayerTxt.innerHTML="HAI VINTO"
+            } else{
+                statusPlayerTxt.innerHTML="HAI PERSO"
+            }
+
+             for(let i = 0; i<cells.length; i++){
+                cells[i].removeEventListener('click', turnclick)
+            }
+            return[a,b,c]
+        }
+    }
+    return false
+}
+
+function emptySquares(){
+    return origBoard.filter(s => typeof s == 'number')
+}
+
+function bestSpot(){
+    return emptySquares()[0]
+}
+
+function checkTie(){
+    if(emptySquares().length == 0){
+        for(let i =0; i<cells.length; i++){
+            cells[i].removeEventListener('click', turnclick)
+        }
+    }
+}
+    </script>
+</body>
+</html>
